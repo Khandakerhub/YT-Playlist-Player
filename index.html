@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="style.css">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet">
+	<title>YouTube Audio Player</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<link rel="icon" href="data:,">
+</head>
+
+<body>
+	<h1 class="playerTitle">YouTube Playlist Audio Player</h1>
+	<!-- Input and Load Button -->
+	<div class="inputSection">
+		<input type="text" id="playlistInput" placeholder=" Paste YouTube Playlist URL or ID..." />
+		<div class="pasteAndLoadBtn">
+			<button id="pastePlaylistBtn" class="control-button">
+				<i class="fa-solid fa-paste"></i> Paste Playlist
+			</button>
+			<button id="loadPlaylistBtn" class="control-button">
+				<i class="fas fa-cloud-download-alt"></i> Load Playlist
+			</button>
+		</div>
+	</div>
+
+	<div id="metaInfo">
+		<div id="videoTitle">Title: Loading...</div>
+		<img id="thumbnail" src="" alt="Thumbnail" />
+		<div id="channelTitle">Channel: Loading...</div>
+	</div>
+	<div class="progressContainer">
+		<div class="time" id="currentTime">0:00</div>
+		<div class="progressBar" id="progressBar">
+			<div class="progressFill" id="progressFill"></div>
+		</div>
+		<div class="time" id="duration">0:00</div>
+	</div>
+
+	<div id="controls">
+		<!-- <button id="btnShuffle"><i class="fas fa-random"></i></button> -->
+		<button id="btnPrev" title="btnPrev" type="button"><i class="fas fa-backward"></i></button>
+		<button id="btnPlayPause" title="btnPlayPause" type="button"><i class="fas fa-play"></i></button>
+		<button id="btnNext" title="btnNext" type="button"><i class="fas fa-forward"></i></button>
+		<button id="btnLoop" title="btnLoop" type="button"><i class="fas fa-repeat"></i></button>
+	</div>
+
+	<div id="volumeControl">
+		<button id="btnMute" title="btnMute" type="button"><i class="fas fa-volume-up"></i></button>
+		<div class="volume-bar" id="volumeBar">
+			<div class="volume-fill" id="volumeFill"></div>
+		</div>
+	</div>
+	<div id="player"></div>
+	<!-- Modal -->
+	<div id="alertModal" class="modal">
+		<div class="modal-content">
+			<span id="modalClose" class="close">&times;</span>
+			<p id="modalMessage">This is a modal message.</p>
+		</div>
+	</div>
+
+	<div id="playList">
+		<h4 class="tryList">Try One Playlist ID from bellow:</h4>
+		<div class="myList">
+			<p id="list1">PLLV_rQPJchJvuH3YX_o_dNoevkdKuwxfp</p>
+			<button id="btn1" class="copyBtn" title="button" type="button"><i class="fa-solid fa-copy"></i></button>
+		</div>
+		<div class="myList">
+			<p id="list2">PLzxTmXYDR-xXYrv0K3r4nzIh1zBBhHI-b</p>
+			<button id="btn2" class="copyBtn" title="button" type="button"><i class="fa-solid fa-copy"></i></button>
+		</div>
+		<div class="myList">
+			<p id="list3">PL1jDKDU9H8ikUKLTfrw_7ulzI_uFp_A31</p>
+			<button id="btn3" class="copyBtn" title="button" type="button"><i class="fa-solid fa-copy"></i></button>
+		</div>
+	</div>
+	<!-- Load the IFrame API -->
+	<script src="https://www.youtube.com/iframe_api"></script>
+
+	<script src="script.js"></script>
+
+</body>
+
+</html>
