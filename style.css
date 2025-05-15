@@ -54,6 +54,11 @@ body {
 			cursor: pointer;
 			transition: background 0.2s;
 		}
+        #pastePlaylistBtn:hover,
+		#loadPlaylistBtn:hover {
+			background: #3a3a3a;
+			color: #f00;
+		}
 
 		#loadPlaylistBtn i {
 			margin-right: 5px;
